@@ -26,10 +26,11 @@ config = {
     "label": ["Points"],
     "x": ["Points"],
 	"color" : ["Name"],
+	"sort": "byValue"
 }
 
 style = {'plot' : 
-			{'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
+			{'paddingLeft' : '10em'},
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
 		#	'marker' :{ 'label' :{ 'position' : 'top'}},
 			},
@@ -40,7 +41,7 @@ style = {'plot' :
 for i in range(1, 56):
     config["title"] = f"Music Revenue by Format {i}"
     vchart.animate(
-        Data.filter(f"parseInt(record.Match_no) == {i}"),
+        Data.filter(f"parseInt(record.Match_no) <= {i}"),
         Config(config),
 		Style(style),
         duration=0.2,
