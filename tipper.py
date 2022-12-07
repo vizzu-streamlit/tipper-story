@@ -62,8 +62,8 @@ config = {
     "y": y,
     "label": ["Points"],
     "x": x,
-#	"color" : color,
-#	"lightness" : lightness,
+	"color" : color,
+	"lightness" : lightness,
 }
 
 style = {
