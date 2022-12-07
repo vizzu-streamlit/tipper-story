@@ -33,7 +33,7 @@ filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
 #title =  ", ".join(rounds) + by f"{compare_by}
 
 if show == "Total":
-	measure = ["Points"]
+	measure:str = "Points"
 	lightness = None,
 	color = None
 	
@@ -59,7 +59,7 @@ else:# compare_by == "Match":
 config = {
   #  "title": title,
     "y": y,
-  #  "label": ["Points"],
+    "label": ["Points"],
     "x": x,
 	"color" : color,
 	"lightness" : lightness,
