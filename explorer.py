@@ -65,7 +65,7 @@ config = {
 
 style = {'plot' : {
 			'paddingLeft' : '10em', 
-			'paddingBottom' : paddingBottom,
+			'paddingBottom' : bottomPadding,
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
 			'xAxis' :{ 'title' :{ 'color' : '#00000000'},'label': {'angle': '-45deg'}},
 			'marker' :{ 'label' :{ 'position' : position}},
