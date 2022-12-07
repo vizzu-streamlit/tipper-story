@@ -64,13 +64,17 @@ config = {
 #	"color" : color,
 #	"lightness" : lightness,
 }
+
+style = {
+	'plot' : {'paddingLeft' : '10em'},
+}
     
 if order == "Alphabetically / by time":
     config["sort"] = "none"
 else:
     config["sort"] = "byValue"
 
-vchart.animate(Data.filter(filter), Config(config), delay=0.1)
+vchart.animate(Data.filter(filter), Config(config), Style(style), delay=0.1)
 output = vchart.show()
 
 st.write(output)
