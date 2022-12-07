@@ -9,7 +9,7 @@ data_frame = pd.read_csv("https://raw.githubusercontent.com/vizzu-streamlit/tipp
 data = Data()
 data.add_data_frame(data_frame)
 
-chart = Chart(width="100%", height="360px", display="manual")
+chart = Chart(width="100%", height="400px", display="manual")
 
 chart.animate(data)
 chart.feature("tooltip", True)
@@ -24,8 +24,8 @@ rounds: list[str] = st.multiselect(
 
 col1, col2, col3, col4 = st.columns(4)
 
-compare_by = col1.radio("Compare by", ["Name", "Match", "Both"])
-show = col2.radio("Show",["Total","Stages","Match"])
+compare_by = col1.radio("Compare by", ["Name", "Match"])
+show = col2.radio("Show",["Total","Stages"])
 order = col3.radio("Order items", ["Alphabetically / by time", "By value"])
 split = col4.radio("Split items", ["True","False"],index=1)
 
@@ -61,7 +61,9 @@ config = {
 }
 
 style = {
-	'plot' : {'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}}},
+	'plot' : {'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
+			'marker' :{ 'label' :{ 'position' : 'top'}}
+			},
 	'legend' : {'width' : '12em'},
 }
     
