@@ -57,7 +57,7 @@ else:# compare_by == "Match":
 
 
 config = {
-    "title": title,
+  #  "title": title,
     "y": y,
     "label": ["Points"],
     "x": x,
