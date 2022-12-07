@@ -60,11 +60,13 @@ config = {
 	"split" : split,
 }
 
-style = {
-	'plot' : {'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
-			#'marker' :{ 'label' :{ 'position' : 'top'}}
+style = {'plot' : 
+			{'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
+			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
+		#	'marker' :{ 'label' :{ 'position' : 'top'}},
 			},
-	'legend' : {'width' : '12em'},
+			'legend' : {'width' : '12em'},
+		
 }
     
 if order == "Alphabetically / by time":
