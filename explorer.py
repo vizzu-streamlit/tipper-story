@@ -42,23 +42,23 @@ else:
 	lightness = ["Round"]
 
 if compare_by == "Names":
-    y = ["Name"]
-    x = measure
+	y = ["Name"]
+	x = measure
 	bottomPadding = None
 	position = None
 	
 else:
-    y = measure
-    x = ["Match"]
+	y = measure
+	x = ["Match"]
 	bottomPadding = "10em"
 	position = "top"
 
 
 config = {
-  #  "title": title,
-    "y": y,
-    "label": ["Points"],
-    "x": x,
+	#  "title": title,
+	"y": y,
+	"label": ["Points"],
+	"x": x,
 	"lightness" : lightness,
 	"split" : split,
 }
