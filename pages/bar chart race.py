@@ -28,7 +28,6 @@ config = {
 style = {'plot' : 
 			{'paddingLeft' : '10em',
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
-		#	'marker' :{ 'label' :{ 'position' : 'top'}},
 			},
 			'legend' : {'width' : '12em'},
 		
