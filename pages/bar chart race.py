@@ -38,13 +38,13 @@ style = {'plot' :
 		
 }
 
-for i in range(1, 56):
-    config["title"] = f"Music Revenue by Format {i}"
+for i in range(1, 57):
+   # config["title"] = f"Music Revenue by Format {i}"
     vchart.animate(
         Data.filter(f"parseInt(record.Match_no) <= {i}"),
         Config(config),
 		Style(style),
-        duration=0.2,
+        duration=0.3,
         x={"easing": "linear", "delay": 0},
         y={"delay": 0},
         show={"delay": 0},
