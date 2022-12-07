@@ -37,13 +37,13 @@ if show == "Total":
 	lightness = None,
 	color = None
 	
-elif show == "Stage":
-	measure = ["Stage","Points"]
-	lightness = ["Stage"]
+elif show == "Stages":
+	measure = ["Round","Points"]
+	lightness = ["Round"]
 	color = None
 else:
-	measure = ["Stage","Match","Points"]
-	lightness = ["Stage"]
+	measure = ["Round","Match","Points"]
+	lightness = ["Round"]
 	color = ["Match"]
 
 
