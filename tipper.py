@@ -34,17 +34,17 @@ filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
 
 if show == "Total":
 	measure = ["Points"]
-	config["lightness"] = None
-	config["color"] = None
+	lightness = None,
+	color = None
 	
 elif show == "Stage":
 	measure = ["Stage","Points"]
-	config["lightness"] = ["Stage"]
-	config["color"] = None
+	lightness = ["Stage"]
+	color = None
 else:
 	measure = ["Stage","Match","Points"]
-	config["lightness"] = ["Stage"]
-	config["color"] = ["Match"]
+	lightness = ["Stage"]
+	color = ["Match"]
 
 
 if compare_by == "Name":
@@ -61,6 +61,8 @@ config = {
     "y": y,
     "label": ["Points"],
     "x": x,
+	"color" : color,
+	"lightness" : lightness,
 }
 
 if coords == "Polar (mobile)":
