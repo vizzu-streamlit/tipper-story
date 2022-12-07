@@ -16,11 +16,7 @@ chart.feature("tooltip", True)
 
 vchart = VizzuChart(chart, key="vizzu")
 
-rounds: list[str] = st.multiselect(
-    "Rounds",
-    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
-    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
-)
+
 
 #title =  ", ".join(rounds) + by f"{compare_by}
 
