@@ -38,7 +38,7 @@ style = {'plot' :
 		
 }
 
-f :str = data_frame.loc[1].at["Match"]
+f = data_frame.loc[1].at["Match"]
 st.write(f)
 
 for i in range(1, 57):
