@@ -44,7 +44,7 @@ st.write(f)
 for i in range(1, 57):
 	j = 18*i+1
 	f = data_frame.loc[j].at["Match"],
-	config["title"] = f"{f}" 
+	config["title"] = f"f" 
 	vchart.animate(
 		Data.filter(f"parseInt(record.Match_no) <= {i}"),
 		Config(config),
