@@ -36,8 +36,6 @@ style = {'plot' :
 			'legend' : {'width' : '12em'},
 		
 }
-    
-vchart.animate(
 
 for i in range(1, 56):
     config["title"] = f"Music Revenue by Format {i}"
