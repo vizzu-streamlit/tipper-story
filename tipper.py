@@ -21,7 +21,7 @@ rounds: list[str] = st.multiselect(
     ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
 )
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 compare_by = col1.radio("Compare by", ["Name", "Match", "Both"])
 show = col2.radio("Show",["Total","Stages","Match"])
