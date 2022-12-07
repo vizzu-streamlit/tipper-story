@@ -58,11 +58,11 @@ else:# compare_by == "Match":
 
 config = {
   #  "title": title,
-    "y": y,
+    "y": "Name",
     "label": ["Points"],
-    "x": x,
-	"color" : color,
-	"lightness" : lightness,
+    "x": "Points",
+#	"color" : color,
+#	"lightness" : lightness,
 }
     
 if order == "Alphabetically / by time":
