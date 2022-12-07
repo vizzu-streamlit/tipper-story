@@ -62,7 +62,7 @@ config = {
 
 style = {
 	'plot' : {'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
-			'marker' :{ 'label' :{ 'position' : 'top'}}
+			#'marker' :{ 'label' :{ 'position' : 'top'}}
 			},
 	'legend' : {'width' : '12em'},
 }
