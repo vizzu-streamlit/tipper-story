@@ -12,6 +12,7 @@ data.add_data_frame(data_frame)
 chart = Chart(width="100%", height="360px", display="manual")
 
 chart.animate(data)
+chart.feature("tooltip", True)
 
 vchart = VizzuChart(chart, key="vizzu")
 
@@ -75,7 +76,7 @@ else:
     config["sort"] = "byValue"
 
 vchart.animate(Data.filter(filter), Config(config), Style(style), delay=0.1)
-vchart.feature("tooltip", True)
+
 
 output = vchart.show()
 st.write(output)
