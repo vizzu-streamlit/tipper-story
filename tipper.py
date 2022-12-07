@@ -27,7 +27,7 @@ col1, col2, col3, col4 = st.columns(4)
 compare_by = col1.radio("Compare by", ["Name", "Match", "Both"])
 show = col2.radio("Show",["Total","Stages","Match"])
 order = col3.radio("Order items", ["Alphabetically / by time", "By value"])
-split = col4.radio("Split items", ["False","True"])
+split = col4.radio("Split items", ["True","False"],index=1)
 
 
 filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
@@ -81,6 +81,12 @@ if order == "Alphabetically / by time":
 else:
     config["sort"] = "byValue"
 
+
+if split == "False":
+    config["split"] = "False"
+else:
+    config["sort"] = "True"
+	
 vchart.animate(Data.filter(filter), Config(config), Style(style), delay=0.1)
 
 
