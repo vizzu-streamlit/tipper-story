@@ -44,13 +44,13 @@ st.write(f)
 for i in range(1, 57):
 	j = 18*i+1
 	f = data_frame.loc[j].at["Match"],
-	config["title"] = f 
+	config["title"] = f"{f}" 
 	vchart.animate(
 		Data.filter(f"parseInt(record.Match_no) <= {i}"),
 		Config(config),
 		Style(style),
 		duration=0.3,
-		delay = 0.5,
+		delay = 0.1,
 		x={"easing": "linear", "delay": 0},
 		y={"delay": 0},
 		show={"delay": 0},
