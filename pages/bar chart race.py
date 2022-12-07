@@ -55,7 +55,7 @@ for i in range(1, 57):
 		Data.filter(f"parseInt(record.Match_no) <= {i}"),
 		Config(config),
 		Style(style),
-		duration=0.3,
+		duration=0.5,
 		delay = wait,
 		x={"easing": "linear", "delay": 0},
 		y={"delay": 0},
