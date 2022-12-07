@@ -37,16 +37,19 @@ if show == "Total":
 	measure:str = "Points"
 	lightness = None,
 	color = None
+	legend = None
+
 	
 elif show == "Stages":
 	measure = ["Round","Points"]
 	lightness = ["Round"]
 	color = None
+	legend = ["lightness"]
 else:
 	measure = ["Round","Match","Points"]
 	lightness = ["Round"]
 	color = ["Match"]
-
+	legend = ["color"]
 
 if compare_by == "Name":
     y = ["Name"]
@@ -68,6 +71,7 @@ config = {
 
 style = {
 	'plot' : {'paddingLeft' : '10em'},
+	'legend' : {'width' : '100%'},
 }
     
 if order == "Alphabetically / by time":
