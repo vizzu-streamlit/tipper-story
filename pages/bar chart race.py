@@ -39,8 +39,8 @@ style = {'plot' :
 }
 
 for i in range(1, 57):
-	f : str = data_frame.loc[i*19].at["Match"]
-    config["title"] = f"{f}" 
+	f = data_frame.loc[i*19].at["Match"],
+    config["title"] = f"Music Revenue by Format {f}" 
     vchart.animate(
         Data.filter(f"parseInt(record.Match_no) <= {i}"),
         Config(config),
