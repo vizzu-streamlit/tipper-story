@@ -12,13 +12,14 @@ data.add_data_frame(data_frame)
 chart = Chart(width="100%", height="400px", display="manual")
 
 chart.animate(data)
-chart.feature("tooltip", True)
 
 vchart = VizzuChart(chart, key="vizzu")
 
-
-
-#title =  ", ".join(rounds) + by f"{compare_by}
+rounds: list[str] = st.multiselect(
+    "Rounds",
+    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
+    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
+)
 
 config = {
     "y": ["Name"],
@@ -36,10 +37,12 @@ style = {'plot' :
 		
 }
     
+vchart.animate(
+
 for i in range(1, 56):
     config["title"] = f"Music Revenue by Format {i}"
     vchart.animate(
-        Data.filter(f"parseInt(record.Match_no.) == {i}"),
+        Data.filter(f"parseInt(record.Match_no) == {i}"),
         Config(config),
 		Style(style),
         duration=0.2,
