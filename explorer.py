@@ -42,7 +42,7 @@ else: #show == "Stages":
 	measure = ["Round","Points"]
 	lightness = ["Round"]
 
-if compare_by == "Name":
+if compare_by == "Names":
     y = ["Name"]
     x = measure
 	
