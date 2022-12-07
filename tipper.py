@@ -36,23 +36,12 @@ filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
 if show == "Total":
 	measure:str = "Points"
 	lightness = None
-	color = None
-	legend = None
 
 	
 else: #show == "Stages":
 	measure = ["Round","Points"]
 	lightness = ["Round"]
-	color = None
-	legend = ["lightness"]
 
-"""
-else:
-	measure = ["Round","Match","Points"]
-	lightness = ["Round"]
-	color = ["Match"]
-	legend = ["color"]
-"""
 if compare_by == "Name":
     y = ["Name"]
     x = measure
@@ -67,13 +56,12 @@ config = {
     "y": y,
     "label": ["Points"],
     "x": x,
-	"color" : color,
 	"lightness" : lightness,
 	"split" : split,
 }
 
 style = {
-	'plot' : {'paddingLeft' : '10em', "xAxis": {"label": {"angle": "2.5" }}},
+	'plot' : {'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}}},
 	'legend' : {'width' : '12em'},
 }
     
@@ -86,7 +74,7 @@ else:
 if split == "False":
     config["split"] = "False"
 else:
-    config["sort"] = "True"
+    config["split"] = "True"
 	
 vchart.animate(Data.filter(filter), Config(config), Style(style), delay=0.1)
 
