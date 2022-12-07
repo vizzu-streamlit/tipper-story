@@ -38,13 +38,17 @@ style = {'plot' :
 		
 }
 
+f :str  = data_frame.loc[0].at["Match"]
+st.write(f)
 f :str  = data_frame.loc[1].at["Match"]
+st.write(f)
+f :str  = data_frame.loc[1064].at["Match"]
 st.write(f)
 
 for i in range(1, 57):
 	j = 18*i+1
 	f = data_frame.loc[j].at["Match"],
-	config["title"] = f 
+	config["title"] = f"{f}" 
 	vchart.animate(
 		Data.filter(f"parseInt(record.Match_no) <= {i}"),
 		Config(config),
