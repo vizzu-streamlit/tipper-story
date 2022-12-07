@@ -21,7 +21,7 @@ rounds: list[str] = st.multiselect(
     ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
 )
 
-speed = st.select_slider(Speed, options=("Slow", "Medium", "Fast"), value="Medium")
+speed = st.select_slider("Speed", options=("Slow", "Medium", "Fast"), value="Medium")
 
 config = {
     "y": ["Name"],
