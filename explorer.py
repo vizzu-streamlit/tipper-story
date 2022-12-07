@@ -37,18 +37,21 @@ if show == "Total":
 	measure:str = "Points"
 	lightness = None
 
-	
-else: #show == "Stages":
+else: 
 	measure = ["Round","Points"]
 	lightness = ["Round"]
 
 if compare_by == "Names":
     y = ["Name"]
     x = measure
+	bottomPadding = None
+	position = None
 	
-else:# compare_by == "Match":
+else:
     y = measure
     x = ["Match"]
+	bottomPadding = "10em"
+	position = "top"
 
 
 config = {
@@ -62,9 +65,10 @@ config = {
 
 style = {'plot' : {
 			'paddingLeft' : '10em', 
+			'paddingBottom' : paddingBottom,
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
 			'xAxis' :{ 'title' :{ 'color' : '#00000000'},'label': {'angle': '-45deg'}},
-	#		'marker' :{ 'label' :{ 'position' : 'top'}},
+			'marker' :{ 'label' :{ 'position' : position}},
 			},
 			'legend' : {'width' : '12em'},
 		
