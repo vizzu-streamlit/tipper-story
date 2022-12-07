@@ -63,6 +63,7 @@ config = {
 style = {'plot' : 
 			{'paddingLeft' : '10em', 'xAxis': {'label': {'angle': '2.5'}},
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
+			'xAxis' :{ 'title' :{ 'color' : '#00000000'}},
 		#	'marker' :{ 'label' :{ 'position' : 'top'}},
 			},
 			'legend' : {'width' : '12em'},
