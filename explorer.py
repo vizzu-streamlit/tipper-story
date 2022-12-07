@@ -16,6 +16,10 @@ chart.feature("tooltip", True)
 
 vchart = VizzuChart(chart, key="vizzu")
 
+st.title("Powerade VB Tippverseny Data Explorer")
+
+st.markdown("## Welcome! :heart_eyes: <br> Here you can explore the data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
+
 rounds: list[str] = st.multiselect(
     "Rounds",
     ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],

@@ -28,10 +28,15 @@ config = {
 style = {'plot' : 
 			{'paddingLeft' : '10em',
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
+			'xAxis' :{ 'title' :{ 'color' : '#00000000'}},
 			},
 			'legend' : {'width' : '12em'},
 		
 }
+
+st.title("Powerade VB Tippverseny Bar Chart Race")
+
+st.markdown("Here you can just lay back and enjoy the show. Will try to add interactivity later.")
 
 speed = "Medium"
 if speed == "Slow":
