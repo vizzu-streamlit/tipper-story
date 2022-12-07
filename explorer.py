@@ -60,9 +60,9 @@ config = {
 	"split" : split,
 }
 
-style = {'plot' : 
-			{'paddingLeft' : '10em', 
-			'xAxis': { 'label': {'angle': '2.5'}},
+style = {'plot' : {
+			'paddingLeft' : '10em', 
+			'xAxis': { 'label': {'angle': '-45deg'}},
 			'yAxis' :{ 'title' :{ 'color' : '#00000000'}},
 			'xAxis' :{ 'title' :{ 'color' : '#00000000'}},
 		#	'marker' :{ 'label' :{ 'position' : 'top'}},
