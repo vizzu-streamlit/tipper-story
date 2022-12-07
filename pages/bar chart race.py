@@ -56,7 +56,7 @@ for i in range(1, 57):
 		Config(config),
 		Style(style),
 		duration=0.3,
-		delay = delay,
+		delay = wait,
 		x={"easing": "linear", "delay": 0},
 		y={"delay": 0},
 		show={"delay": 0},
