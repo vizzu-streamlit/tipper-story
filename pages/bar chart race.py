@@ -39,12 +39,14 @@ style = {'plot' :
 }
 
 for i in range(1, 57):
-   # config["title"] = f"Music Revenue by Format {i}"
+	f : str = data_frame.loc[i*19].at["Match"]
+    config["title"] = f"{f}" 
     vchart.animate(
         Data.filter(f"parseInt(record.Match_no) <= {i}"),
         Config(config),
 		Style(style),
         duration=0.3,
+		delay = 0.1,
         x={"easing": "linear", "delay": 0},
         y={"delay": 0},
         show={"delay": 0},
