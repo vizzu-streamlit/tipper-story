@@ -40,17 +40,19 @@ if show == "Total":
 	legend = None
 
 	
-elif show == "Stages":
+else: #show == "Stages":
 	measure = ["Round","Points"]
 	lightness = ["Round"]
 	color = None
 	legend = ["lightness"]
+
+"""
 else:
 	measure = ["Round","Match","Points"]
 	lightness = ["Round"]
 	color = ["Match"]
 	legend = ["color"]
-
+"""
 if compare_by == "Name":
     y = ["Name"]
     x = measure
@@ -70,8 +72,8 @@ config = {
 }
 
 style = {
-	'plot' : {'paddingLeft' : '10em'},
-	'legend' : {'width' : '100%'},
+	'plot' : {'paddingLeft' : '10em', "xAxis": {"label": {"angle": "2.5" }}},
+	'legend' : {'width' : '12em'},
 }
     
 if order == "Alphabetically / by time":
