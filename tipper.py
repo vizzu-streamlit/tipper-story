@@ -1,11 +1,11 @@
 import pandas as pd
 import streamlit as st
-from ipyvizzu.animation import Config, Data
+from ipyvizzu.animation import Config, Data, Style
 from ipyvizzu.chart import Chart
 
 from streamlit_vizzu import VizzuChart
 
-data_frame = pd.read_csv("https://raw.githubusercontent.com/vizzu-streamlit/streamlit-vizzu/main/sales2.csv")
+data_frame = pd.read_csv("https://raw.githubusercontent.com/vizzu-streamlit/tipper-story/main/tipper.csv")
 data = Data()
 data.add_data_frame(data_frame)
 
@@ -15,44 +15,52 @@ chart.animate(data)
 
 vchart = VizzuChart(chart, key="vizzu")
 
-items: list[str] = st.multiselect(
-    "Products",
-    ["Shoes", "Handbags", "Gloves", "Accessories"],
-    ["Shoes", "Handbags", "Gloves", "Accessories"],
+rounds: list[str] = st.multiselect(
+    "Rounds",
+    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
+    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
 )
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
-measure: str = col1.radio("Measure", ["Sales", "Revenue [$]"])  # type: ignore
-compare_by = col2.radio("Compare by", ["Region", "Product", "Both"])
-coords = col3.radio("Coordinate system", ["Cartesian (desktop)", "Polar (mobile)"])
-order = col4.radio("Order items", ["Alphabetically", "By value"])
+compare_by = col1.radio("Compare by", ["Name", "Match", "Both"])
+show = col2.radio("Show",["Total","Stages","Match"])
+order = col3.radio("Order items", ["Alphabetically / by time", "By value"])
+split = col4.radio("Split items", ["False","True"])
 
-filter = " || ".join([f"record['Product'] == '{item}'" for item in items])
-title = f"{measure} of " + ", ".join(items)
 
-if compare_by == "Product":
-    y = ["Product"]
+filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
+#title =  ", ".join(rounds) + by f"{compare_by}
+
+if show == "Total":
+	measure = ["Points"]
+	config["lightness"] = None
+	config["color"] = None
+	
+elif show == "Stage":
+	measure = ["Stage","Points"]
+	config["lightness"] = ["Stage"]
+	config["color"] = None
+else
+	measure = ["Stage","Match","Points"]
+	config["lightness"] = ["Stage"]
+	config["color"] = ["Match"]
+
+
+if compare_by == "Name":
+    y = ["Name"]
     x = [measure]
-    color = None
-
-elif compare_by == "Region":
+	
+else:# compare_by == "Match":
     y = [measure]
-    x = ["Region"]
-    color = ["Region"]
-
-else:
-    y = ["Product"]
-    x = [measure, "Region"]
-    color = ["Region"]
+    x = ["Match"]
 
 
 config = {
     "title": title,
     "y": y,
-    "label": measure,
+    "label": ["Points"],
     "x": x,
-    "color": color,
 }
 
 if coords == "Polar (mobile)":
@@ -60,7 +68,7 @@ if coords == "Polar (mobile)":
 else:
     config["coordSystem"] = "cartesian"
     
-if order == "Alphabetically":
+if order == "Alphabetically / by time":
     config["sort"] = "none"
 else:
     config["sort"] = "byValue"
