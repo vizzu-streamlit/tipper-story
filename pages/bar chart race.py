@@ -21,6 +21,8 @@ rounds: list[str] = st.multiselect(
     ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
 )
 
+speed = st.select_slider(Speed, options=("Slow", "Medium", "Fast"), value="Medium",
+
 config = {
     "y": ["Name"],
     "label": ["Points"],
@@ -38,6 +40,13 @@ style = {'plot' :
 		
 }
 
+if speed == "Slow":
+	wait = 2
+elif speed == "Medium":
+	wait = 1
+else: 
+	wait = 0.2
+
 for i in range(1, 57):
 	j = 19*i-2
 	f = data_frame.loc[j].at["Match"],
@@ -47,7 +56,7 @@ for i in range(1, 57):
 		Config(config),
 		Style(style),
 		duration=0.3,
-		delay = 0.1,
+		delay = delay,
 		x={"easing": "linear", "delay": 0},
 		y={"delay": 0},
 		show={"delay": 0},
