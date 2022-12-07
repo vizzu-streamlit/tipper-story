@@ -50,18 +50,18 @@ else:
 
 if compare_by == "Name":
     y = ["Name"]
-    x = [measure]
+    x = measure
 	
 else:# compare_by == "Match":
-    y = [measure]
+    y = measure
     x = ["Match"]
 
 
 config = {
   #  "title": title,
-    "y": "Name",
+    "y": y,
     "label": ["Points"],
-    "x": "Points",
+    "x": x,
 #	"color" : color,
 #	"lightness" : lightness,
 }
