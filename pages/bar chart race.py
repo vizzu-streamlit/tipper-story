@@ -34,6 +34,7 @@ style = {'plot' :
 		
 }
 
+speed = "Medium"
 if speed == "Slow":
 	wait = 2
 elif speed == "Medium":
