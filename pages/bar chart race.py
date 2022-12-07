@@ -38,15 +38,8 @@ style = {'plot' :
 		
 }
 
-f :str  = data_frame.loc[0].at["Match"]
-st.write(f)
-f :str  = data_frame.loc[1].at["Match"]
-st.write(f)
-f :str  = data_frame.loc[1063].at["Match"]
-st.write(f)
-
 for i in range(1, 57):
-	j = 18*i+1
+	j = 19*i-2
 	f = data_frame.loc[j].at["Match"],
 	config["title"] = f"{f}" 
 	vchart.animate(
