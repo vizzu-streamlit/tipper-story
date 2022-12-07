@@ -15,13 +15,7 @@ chart.animate(data)
 
 vchart = VizzuChart(chart, key="vizzu")
 
-rounds: list[str] = st.multiselect(
-    "Rounds",
-    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
-    ["Group stage 1", "Group stage 2", "Group stage 3", "Round of 16"],
-)
-
-speed = st.select_slider("Speed", options=("Slow", "Medium", "Fast"), value="Medium")
+#speed = st.select_slider("Speed", options=("Slow", "Medium", "Fast"), value="Medium")
 
 config = {
     "y": ["Name"],
@@ -56,7 +50,7 @@ for i in range(1, 57):
 		Config(config),
 		Style(style),
 		duration=0.5,
-		delay = wait,
+		delay = 1,
 		x={"easing": "linear", "delay": 0},
 		y={"delay": 0},
 		show={"delay": 0},
