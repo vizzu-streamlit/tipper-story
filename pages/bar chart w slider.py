@@ -31,6 +31,8 @@ style = {'plot' :
 			},
 			'legend' : {'width' : '12em'},		
 }
+
+f = data_frame.loc[19*position-2].at["Match"],
 config["title"] = f"{f}"
 vchart.animate(
 	Data.filter(f"parseInt(record.Match_no) <= {position}"),
