@@ -69,6 +69,7 @@ config = {
     "x": x,
 	"color" : color,
 	"lightness" : lightness,
+	"split" : split,
 }
 
 style = {
