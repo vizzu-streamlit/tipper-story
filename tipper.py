@@ -64,11 +64,6 @@ config = {
 	"color" : color,
 	"lightness" : lightness,
 }
-
-if coords == "Polar (mobile)":
-    config["coordSystem"] = "polar"
-else:
-    config["coordSystem"] = "cartesian"
     
 if order == "Alphabetically / by time":
     config["sort"] = "none"
