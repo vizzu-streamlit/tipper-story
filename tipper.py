@@ -35,15 +35,15 @@ filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
 
 if show == "Total":
 	measure:str = "Points"
-	lightness = "None"
-	color = "None"
-	legend = "None"
+	lightness = None
+	color = None
+	legend = None
 
 	
 elif show == "Stages":
 	measure = ["Round","Points"]
 	lightness = ["Round"]
-	color = "None"
+	color = None
 	legend = ["lightness"]
 else:
 	measure = ["Round","Match","Points"]
