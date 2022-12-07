@@ -72,9 +72,9 @@ else:
 
 
 if split == "False":
-    config["split"] = "False"
+    config["split"] = False
 else:
-    config["split"] = "True"
+    config["split"] = True
 	
 vchart.animate(Data.filter(filter), Config(config), Style(style), delay=0.1)
 
