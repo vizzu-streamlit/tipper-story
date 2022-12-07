@@ -57,5 +57,3 @@ for i in range(1, 56):
 
 output = vchart.show()
 st.write(output)
-
-
