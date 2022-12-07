@@ -41,7 +41,7 @@ elif show == "Stage":
 	measure = ["Stage","Points"]
 	config["lightness"] = ["Stage"]
 	config["color"] = None
-else
+else:
 	measure = ["Stage","Match","Points"]
 	config["lightness"] = ["Stage"]
 	config["color"] = ["Match"]
