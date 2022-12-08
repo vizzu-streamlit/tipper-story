@@ -21,12 +21,10 @@ st.set_page_config(
 	layout="wide",
 )
 
-st.title("Powerade VB Tippverseny Data Explorer")
-
-st.markdown("## Welcome! :heart_eyes:")
-st.markdown("Gyere vissza inkább laptopról, mobilon nem az igazi")
-st.markdown("Explore data from the epic Powerade VB Tippverseny with the controls above the chart. Hover your mouse or tap on any element of the chart for more details. Let me know if something brakes or puzzles you.")
-st.markdown("There are other charts you can reach via the sidebar on the left. On mobile you have to tap on the arrow in the top left corner first. Have fun!")
+st.markdown("### Powerade VB Tippverseny Data Explorer :heart_eyes::soccer::trophy::blue_heart:")
+st.markdown("Mobilon nem az igazi, laptopon jobb.")
+st.markdown("Kattingass bátran a chart fölötti controlokon, simogasd az egérrel a grafikon elemeit.")
+st.markdown("Van még két másik cucc is, amit a bal oldali menüben érsz el, mobilon a bal felső sarokban lévő nyílra kattints!")
 
 rounds: list[str] = st.multiselect(
     "Rounds",
@@ -39,7 +37,7 @@ col1, col2, col3, col4 = st.columns(4)
 compare_by = col4.radio("Compare by", ["Names", "Matches"])
 show = col1.radio("Show",["Total","by Stages"])
 order = col3.radio("Order items", ["ABC / Time", "Value"])
-split = col2.radio("Split by stages", ["True","False"],index=1)
+split = col2.radio("Split by stages", ["True","False"],index=1, help="Switch to by Stages to make this work")
 
 
 filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])

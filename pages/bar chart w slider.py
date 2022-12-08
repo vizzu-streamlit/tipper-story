@@ -22,7 +22,7 @@ st.set_page_config(
 
 st.title("Powerade VB Tippverseny Interactive Bar Chart")
 
-st.markdown("Here you can select a match with a slider and the chart will show the results of the betting competition up to that match. After clicking on the slider, you can move back and forth with the arrow buttons to see how the race standings changed after each match.")
+st.markdown("Itt a chart fölötti csúszkával tudsz mászkálni a meccsek között, és megnézni, hogy hogy állt a verseny az adott meccs után. Ha belekattintottál, akkor a nyíl billentyűkkel tudsz jobbra-balra menni egy-egy meccset.")
 
 position = st.slider("Pick a match", min_value=(1), max_value=56, value=1)
 
@@ -47,8 +47,8 @@ vchart.animate(
 	Data.filter(f"parseInt(record.Match_no) <= {position}"),
 	Config(config),
 	Style(style),
-	duration=0.5,
-	delay = 0.01,
+	duration=0.7,
+	delay = 0,
 	x={"easing": "linear", "delay": 0},
 	y={"delay": 0},
 	show={"delay": 0},
