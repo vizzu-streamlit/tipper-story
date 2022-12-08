@@ -35,10 +35,10 @@ rounds: list[str] = st.multiselect(
 
 col1, col2, col3, col4 = st.columns(4)
 
-compare_by = col1.radio("Compare by", ["Names", "Matches"])
-show = col2.radio("Show",["Total","by Stages"])
+compare_by = col4.radio("Compare by", ["Names", "Matches"])
+show = col1.radio("Show",["Total","by Stages"])
 order = col3.radio("Order items", ["ABC / Time", "Value"])
-split = col4.radio("Split by stages", ["True","False"],index=1)
+split = col2.radio("Split by stages", ["True","False"],index=1)
 
 
 filter = " || ".join([f"record['Round'] == '{rounds}'" for rounds in rounds])
