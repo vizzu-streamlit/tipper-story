@@ -19,14 +19,13 @@ vchart = VizzuChart(chart, key="vizzu")
 st.set_page_config(
 	page_title="Powerade VB Tippverseny Data Explorer",
 	layout="wide",
-	initial_sidebar_state="collapsed",
 )
 
 st.title("Powerade VB Tippverseny Data Explorer")
 
 st.markdown("## Welcome! :heart_eyes:")
-st.markdown("Explore data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
-st.markdown("There are other pages with different charts if you tap on the arrow in the top left corner. Have fun!")
+st.markdown("Explore data from the epic Powerade VB Tippverseny with the controls above the chart. Hover your mouse or tap on any element of the chart for more details. Let me know if something brakes or puzzles you.")
+st.markdown("There are other charts you can reach via the sidebar on the left. On mobile you have to tap on the arrow in the top left corner first. Have fun!")
 
 rounds: list[str] = st.multiselect(
     "Rounds",

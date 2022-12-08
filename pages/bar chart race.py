@@ -37,7 +37,6 @@ style = {'plot' :
 st.set_page_config(
 	page_title="Powerade VB Tippverseny Bar Chart Race",
 	layout="wide",
-	initial_sidebar_state="collapsed",
 )
 
 
