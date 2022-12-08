@@ -40,9 +40,7 @@ st.set_page_config(
 )
 
 
-st.title("Powerade VB Tippverseny Bar Chart Race")
-
-st.markdown("Itt csak nézni lehet epikus küzdelmünk alakulását az elejétől a végéig. Ha átmész a többi chartra és visszajössz ide, akkor újraindul a sztori.")
+st.markdown("Itt csak nézni lehet epikus küzdelmünk alakulását az elejétől a végéig. Ha átmész a többi oldalra és visszajössz ide, akkor újraindul.")
 
 speed = "Medium"
 if speed == "Slow":

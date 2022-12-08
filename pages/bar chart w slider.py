@@ -20,8 +20,6 @@ st.set_page_config(
 	layout="wide",
 )
 
-st.title("Powerade VB Tippverseny Interactive Bar Chart")
-
 st.markdown("Itt a chart fölötti csúszkával tudsz mászkálni a meccsek között, és megnézni, hogy hogy állt a verseny az adott meccs után. Ha belekattintottál, akkor a nyíl billentyűkkel tudsz jobbra-balra menni egy-egy meccset.")
 
 position = st.slider("Pick a match", min_value=(1), max_value=56, value=1)

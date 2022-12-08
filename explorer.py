@@ -23,7 +23,7 @@ st.set_page_config(
 
 st.markdown("### Powerade VB Tippverseny Data Explorer :heart_eyes::soccer::trophy::blue_heart:")
 st.markdown("Mobilon nem az igazi, laptopon jobb.")
-st.markdown("Kattingass bátran a chart fölötti controlokon, simogasd az egérrel a grafikon elemeit.")
+st.markdown("Kattingasd bátran a gombokat, simogasd az egérrel a grafikon elemeit.")
 st.markdown("Van még két másik cucc is, amit a bal oldali menüben érsz el, mobilon a bal felső sarokban lévő nyílra kattints!")
 
 rounds: list[str] = st.multiselect(
