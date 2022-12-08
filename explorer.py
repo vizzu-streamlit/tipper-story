@@ -19,7 +19,7 @@ vchart = VizzuChart(chart, key="vizzu")
 st.title("Powerade VB Tippverseny Data Explorer")
 
 st.markdown("## Welcome! :heart_eyes:")
-st.markdown("Here you can explore the data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
+st.markdown("Explore the data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
 
 rounds: list[str] = st.multiselect(
     "Rounds",

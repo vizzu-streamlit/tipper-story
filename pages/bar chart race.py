@@ -36,7 +36,7 @@ style = {'plot' :
 
 st.title("Powerade VB Tippverseny Bar Chart Race")
 
-st.markdown("Here you can just lay back and enjoy the show. Will try to add interactivity later.")
+st.markdown("Here you can just lay back and enjoy the show. If you move to the other pages and get back, the race restarts. Will try to add interactivity later e.g. to set the speed.")
 
 speed = "Medium"
 if speed == "Slow":
