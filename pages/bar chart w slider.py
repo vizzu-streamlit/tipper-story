@@ -15,6 +15,12 @@ chart.animate(data)
 
 vchart = VizzuChart(chart, key="vizzu")
 
+st.set_page_config(
+	page_title="Powerade VB Tippverseny Bar Chart Race",
+	layout="wide",
+	initial_sidebar_state="collapsed",
+)
+
 st.title("Powerade VB Tippverseny Interactive Bar Chart")
 
 st.markdown("Here you can select a match with a slider and the chart will show the results of the betting competition up to that match. After clicking on the slider, you can move back and forth with the arrow buttons to see how the race standings changed after each match.")

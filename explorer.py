@@ -9,17 +9,24 @@ data_frame = pd.read_csv("https://raw.githubusercontent.com/vizzu-streamlit/tipp
 data = Data()
 data.add_data_frame(data_frame)
 
-chart = Chart(width="100%", height="400px", display="manual")
+chart = Chart(width="100%", height="360px", display="manual")
 
 chart.animate(data)
 chart.feature("tooltip", True)
 
 vchart = VizzuChart(chart, key="vizzu")
 
+st.set_page_config(
+	page_title="Powerade VB Tippverseny Data Explorer",
+	layout="wide",
+	initial_sidebar_state="collapsed",
+)
+
 st.title("Powerade VB Tippverseny Data Explorer")
 
 st.markdown("## Welcome! :heart_eyes:")
-st.markdown("Explore the data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
+st.markdown("Explore data from the epic Powerade VB Tippverseny with the controls above the chart. Let me know if something brakes or puzzles you.")
+st.markdown("There are other pages with different charts if you tap on the arrow in the top left corner. Have fun!")
 
 rounds: list[str] = st.multiselect(
     "Rounds",
